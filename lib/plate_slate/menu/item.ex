@@ -10,6 +10,7 @@ defmodule PlateSlate.Menu.Item do
     field :description, :string
     field :name, :string
     field :price, :decimal
+    field :allergy_info, {:array, :map}
 
     belongs_to :category, PlateSlate.Menu.Category
 
@@ -24,5 +25,6 @@ defmodule PlateSlate.Menu.Item do
     |> cast(attrs, [:name, :description, :price, :added_on])
     |> validate_required([:name, :price])
     |> foreign_key_constraint(:category)
+    |> unique_constraint(:name)
   end
 end

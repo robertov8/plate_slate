@@ -5,7 +5,7 @@
 # is restricted to this project.
 
 # General application configuration
-use Mix.Config
+import Config
 
 config :plate_slate,
   ecto_repos: [PlateSlate.Repo]
@@ -16,6 +16,7 @@ config :plate_slate, PlateSlateWeb.Endpoint,
   secret_key_base: "xb2bASdf5j+uFhbdEcQEnJ7X2v/ejwKk5fpzTBEP9qjdB4im+xDG+z3bGjn+6bxP",
   render_errors: [view: PlateSlateWeb.ErrorView, accepts: ~w(json), layout: false],
   pubsub_server: PlateSlate.PubSub,
+  # pubsub_server: [name: PlateSlate.PubSub, adapter: Phoenix.PubSub.PG2],
   live_view: [signing_salt: "YoBTX6L0"]
 
 # Configures Elixir's Logger

@@ -43,9 +43,10 @@ defmodule PlateSlate.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:absinthe, "~> 1.6.0"},
+      {:absinthe, "~> 1.7.0"},
       {:absinthe_phoenix, "~> 2.0"},
-      {:absinthe_relay, "~> 1.5"}
+      {:absinthe_relay, "~> 1.5"},
+      {:decimal, "~> 1.9.0"}
     ]
   end
 
